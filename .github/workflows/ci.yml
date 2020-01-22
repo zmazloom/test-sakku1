@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        curl.exe -k -X GET https://api.sakku.cloud/ci/app/2203/rebuild/token/a0738495-ff60-48db-98fd-d7f9440ddba8
